@@ -1,11 +1,24 @@
+const int sensorPin = 2;
+int pinNow = LOW;
+int pinPrevious = LOW;
+
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(sensorPin, INPUT);
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  pinPrevious = pinNow;
+  pinNow = digitalRead(sensorPin);
+  if (pinPrevious == LOW && pinNow == HIGH) {
+    Serial.println("I see you");
+
+  else if (pinPrevious == HIGH && pinNow == LOW) {
+    Serial.println("You ran away :(");
+  }
+
+  }
+
 
 }
-
-// among us testing heheheha!
