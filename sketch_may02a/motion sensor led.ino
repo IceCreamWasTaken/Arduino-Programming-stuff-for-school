@@ -6,6 +6,7 @@ int motionStatePrevious = LOW;
 void setup() {
     Serial.begin(9600);
     pinMode(Motion_Sensor_PIN, INPUT);
+    pinMode(LED, OUTPUT);
 }
 
 void loop() {
