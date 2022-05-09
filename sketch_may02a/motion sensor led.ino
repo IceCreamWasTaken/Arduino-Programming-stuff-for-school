@@ -11,14 +11,16 @@ void setup() {
 
 void loop() {
     motionStatePrevious = motionStateCurrent;
-    motionStateCurrent = digitalRead(Motion_Sensor_PIN, INPUT);
+    motionStateCurrent = digitalRead(Motion_Sensor_PIN);
 
     if (motionatStatePrevious == LOW && motionStateCurrent == HIGH) {
     Serial.println("I see you");
     digitalWrite(LED, HIGH);
-
+    }
   else 
   if (motionStatePrevious == HIGH && motionStateCurrent == LOW) {
     Serial.println("You ran away :(");
     digitalWrite(LED, LOW);
+}
+
 }
