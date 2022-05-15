@@ -10,5 +10,5 @@ void loop() {
 
     if (analogValue <10) {
         Serial.println("- Dark");
-    })
+    }
 }
