@@ -4,6 +4,10 @@
 // The void setup and loop goes in the following order in the order in which I programmed the part:
 // Motion Sensor > Potentiometer > PushButton > LightSensor
 
+// There will be some duplicated lines of code, which those will be negated and will be mentioned as a code comment
+// next to the code if it's been duplicated
+
+
 
 // Set's the pins for the motion sensor
 const int Motion_Sensor_PIN = 7; // A constant integer that can't change value to pin 7 as variable name 'Motion_Sensor_PIN'
@@ -40,17 +44,19 @@ void setup() {
 
 void loop() {
     // Loops a motion sensor on what it should do
-    motionStatePrevious = motionStateCurrent;
-    motionStateCurrent = digitalRead(Motion_Sensor_PIN);
+    motionStatePrevious = motionStateCurrent; // stores the old state 
+    motionStateCurrent = digitalRead(Motion_Sensor_PIN); // reads the new state 
 
-    if (motionatStatePrevious == LOW && motionStateCurrent == HIGH) {
-    Serial.println("I see you");
-    digitalWrite(LED, HIGH);
+    if (motionatStatePrevious == LOW && motionStateCurrent == HIGH) { // A conditional that basically says if the previous state
+    // is off and the current state is on then the bottom functions will be run
+    Serial.println("I see you"); // Prints a message through the serial monitor
+    digitalWrite(LED, HIGH); // turns on the LED 
     }
   else 
-  if (motionStatePrevious == HIGH && motionStateCurrent == LOW) {
-    Serial.println("You ran away :(");
-    digitalWrite(LED, LOW);
+  if (motionStatePrevious == HIGH && motionStateCurrent == LOW) { // A conditional saying if the previous state is high 
+  // or if it's on and the current state is off the bottom functions will be run
+    Serial.println("You ran away :("); // Prints a message through the serial monitor 
+    digitalWrite(LED, LOW); // turns off the LED
 }
 
 }
