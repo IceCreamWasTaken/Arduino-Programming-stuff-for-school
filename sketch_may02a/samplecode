@@ -1,0 +1,405 @@
+// for SD card
+
+#include <SPI.h>
+
+#include <SD.h>
+
+#include "RTClib.h"
+
+
+
+RTC_Millis rtc;     // Software Real Time Clock (RTC)
+
+DateTime rightNow;  // used to store the current time.
+
+
+
+// motor variables and pins
+
+#include <L298N.h>
+
+#define ENA 9
+
+#define IN1 2
+
+#define IN2 3
+
+
+
+#define ENB 6
+
+#define IN3 4
+
+#define IN4 5
+
+
+
+L298N motorR(ENA, IN1, IN2);
+
+L298N motorL(ENB, IN3, IN4);
+
+
+
+// line sensor variables
+
+const int LineSensorPin = 22;
+
+const int RedLedPin = 13;
+
+int LineSensorState = 0;
+
+
+
+// button constants won't change. They're used here to set pin numbers:
+
+const int buttonPin = 40;     // the number of the pushbutton pin
+
+const int button2Pin = 3;     // the number of the pushbutton pin
+
+const int ledPin =  8;      // the number of the LED pin
+
+
+
+// button variables will change:
+
+int buttonState = 0;         // variable for reading the pushbutton status
+
+int button2State = 0;         // variable for reading the pushbutton status
+
+
+
+// Sonar sensor integer variables
+
+const int trigPin = 26;
+
+const int echoPin = 24;
+
+float duration, distance;
+
+
+
+// buzzer pin integer
+
+const int buzzerPin = 5;
+
+
+
+void setup() {
+
+  // Setup for fan motor
+
+  Serial.begin(9600);
+
+
+
+  motorR.setSpeed(255); // an integer between 0 and 255
+
+  motorL.setSpeed(255); // an integer between 0 and 255
+
+
+
+  // Line sensor pin setup
+
+  pinMode(buzzerPin, OUTPUT);
+
+  pinMode(LineSensorPin, INPUT);
+
+
+
+  // the speed of the baud and the necessary input
+
+  pinMode(trigPin, OUTPUT);
+
+  pinMode(echoPin, INPUT);
+
+  Serial.begin(9600);
+
+
+
+  // initialize the LED pin as an output:
+
+  pinMode(ledPin, OUTPUT);
+
+  // initialize the pushbutton pin as an input:
+
+  pinMode(buttonPin, INPUT);
+
+  pinMode(button2Pin, INPUT);
+
+
+
+  // SD Card initialisation
+
+  Serial.print("Initializing SD card...");
+
+  if (!SD.begin(10)) {
+
+    Serial.println("initialization failed!");
+
+    while (1);
+
+  }
+
+  Serial.println("initialization done.");
+
+
+
+  // Get the time of the Computer at compile time and store it on Arduino.
+
+  rtc.begin(DateTime(F(__DATE__), F(__TIME__)));
+
+  logEvent("System Initialisation...");
+
+
+
+}
+
+
+
+void loop() {
+
+  // Button turns on motor
+
+  buttonFan();
+
+  // Sonar turns on LED
+
+  sonarLED();
+
+  // Line sensor turns on buzzer
+
+  lineSensorBuzzer();
+
+
+
+}
+
+
+
+void buttonFan() {
+
+  // button state is read, if true activate motor, if false deactivate motor
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState == LOW) {
+
+    // turn motor on:
+
+    Serial.println("motor on");
+
+    motorR.forward();
+
+    motorL.forward();
+
+    motorR.stop();
+
+    motorL.stop();
+
+
+
+    for (int i = 100; i < 255; i++) {
+
+      motorR.setSpeed(i); // an integer between 0 and 255
+
+      motorL.setSpeed(i); // an integer between 0 and 255
+
+      motorR.forward();
+
+      motorL.forward();
+
+      Serial.print("speed: ");
+
+      Serial.println(i);
+
+      motorR.stop();
+
+      motorL.stop();
+
+    }
+
+  } else {
+
+    // turn motor off:
+
+    digitalWrite; motorR.stop();
+
+    Serial.println("motor off");
+
+  }
+
+}
+
+
+
+void sonarLED() {
+
+  // determines how long the fan will be active when activated
+
+  digitalWrite(trigPin, LOW);
+
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+
+  delayMicroseconds(10);
+
+  digitalWrite(trigPin, LOW);
+
+
+
+  duration = pulseIn(echoPin, HIGH);
+
+  distance = (duration * .0343) / 2;
+
+  Serial.print("Distance: ");
+
+  Serial.println(distance);
+
+  delay(100);
+
+
+
+  // if the distance between the Sonar and an object is <7 turn on LED, otherwise turn off LED
+
+  if (distance < 7) {
+
+    // turn LED on:
+
+    digitalWrite(ledPin, HIGH);
+
+    Serial.println("LED on");
+
+  } else {
+
+    // turn LED off:
+
+    digitalWrite(ledPin, LOW);
+
+    Serial.println("LED off");
+
+  }
+
+
+
+  if (LineSensorState == HIGH) {
+
+    digitalWrite(buzzerPin, HIGH);
+
+    Serial.println("buzzer on");
+
+  } else {
+
+    digitalWrite(buzzerPin, LOW);
+
+    Serial.println("buzzer off");
+
+  }
+
+}
+
+
+
+void lineSensorBuzzer() {
+
+  // If line sensor state is HIGH activate buzzer, if not deactivate buzzer
+
+  LineSensorState = digitalRead(LineSensorPin);
+
+}
+
+
+
+void logEvent(String dataToLog) {
+
+  /*
+
+     Log entries to a file on an SD card.
+
+  */
+
+  // Get the updated/current time
+
+  rightNow = rtc.now();
+
+
+
+  // Open the log file
+
+  File logFile = SD.open("events.csv", FILE_WRITE);
+
+  if (!logFile) {
+
+    Serial.print("Couldn't create log file");
+
+    abort();
+
+  }
+
+
+
+  // Log the event with the date, time and data
+
+  logFile.print(rightNow.year(), DEC);
+
+  logFile.print(",");
+
+  logFile.print(rightNow.month(), DEC);
+
+  logFile.print(",");
+
+  logFile.print(rightNow.day(), DEC);
+
+  logFile.print(",");
+
+  logFile.print(rightNow.hour(), DEC);
+
+  logFile.print(",");
+
+  logFile.print(rightNow.minute(), DEC);
+
+  logFile.print(",");
+
+  logFile.print(rightNow.second(), DEC);
+
+  logFile.print(",");
+
+  logFile.print(dataToLog);
+
+
+
+  // End the line with a return character.
+
+  logFile.println();
+
+  logFile.close();
+
+  Serial.print("Event Logged: ");
+
+  Serial.print(rightNow.year(), DEC);
+
+  Serial.print(",");
+
+  Serial.print(rightNow.month(), DEC);
+
+  Serial.print(",");
+
+  Serial.print(rightNow.day(), DEC);
+
+  Serial.print(",");
+
+  Serial.print(rightNow.hour(), DEC);
+
+  Serial.print(",");
+
+  Serial.print(rightNow.minute(), DEC);
+
+  Serial.print(",");
+
+  Serial.print(rightNow.second(), DEC);
+
+  Serial.print(",");
+
+  Serial.println(dataToLog);
+
+}
