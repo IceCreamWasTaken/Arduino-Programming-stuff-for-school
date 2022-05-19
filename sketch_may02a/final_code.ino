@@ -26,7 +26,8 @@ int potVal = 0; // Set's the variable when turned left and right of the knob, to
 // Set's the pins for the push button
 const int buttonPin = 8; // Constant integer of the button as a digital input as pin 8
 int buttonState = 0; // a changeable state of the button when pressed, sets to zero to start with (or sets it to zero when reset)
-int flag = 0; // variable that indicates a boolean logic value (as 0s or 1s, ups or downs, true or false)
+int oldButtonState = LOW; // old button state for previous input made
+int ledState = LOW; // initialised value of the led state when the push button turns on 
 
 
 void setup() {
@@ -37,7 +38,7 @@ void setup() {
     //the LED, OUTPUT is a setup of the LED light for the potentiometer and pushbutton
 
     // Set's up the pushbutton
-    pinMode(butttonPin, INPUT_PULLUP);
+    pinMode(buttonPin, INPUT_PULLUP);
 
 
 }
@@ -65,23 +66,35 @@ void loop() {
     Serial.println(potVal); // Also reads out the value from the potentiometer for feedback
     delay(200); // delay it by 2/10 of a second or 200 miliseconds 
 
-    // Loops the push
-    buttonState = digitalRead(buttonPin)
-    
-    if (buttonState == LOW) {
-        if (flag == 0){
-            digitalWrite(LED, HIGH);
-            flag = 1;
-        }
-    else 
-    if (flag == 1){
-        digitalWrite(LED, LOW);
-        flag = 0;   
+    // Loops the push button
+    buttonState = digitalRead(buttonPin); // The button state is the state of the button either pressed or not
+
+    if (buttonState != oldButtonState && buttonState == HIGH) 
+    // if button state DOES NOT EQUAL to the old button state AND the pressed button state, then the below
+    // function will run.
+    {
+      ledState = (ledState == LOW ? HIGH : LOW); 
+      // if LED State of the LED light IS EQUAL TO it being off and if that's true then check if it's on and ignores 
+      // if it's off again henceforth the :
+      digitalWrite(LED, ledState); // the LED light will turn on or off based on the button whether it's pressed or not
+      delay(50); // delays by 50 miliseconds or 1/20 of a second
+
+    // Loops the light sensor; collects light   
+    int analogValue = analogRead(A1);
+
+    Serial.print("Brightness: ")
+    Serial.print(analogValue);
+
+    if (analogValue <10) {
+      Serial.println("Dark!");
+    } else
+    if (analogValue >800) {
+      Serial.println("TOO BRIGHT AHHHHH!")
     }
-}
 
 
 
-
+    }
+    oldButtonState = buttonState; // The old button state will store whatever the current button state has done
 }
 
