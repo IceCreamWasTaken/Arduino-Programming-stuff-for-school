@@ -19,7 +19,7 @@ void loop() {
     else 
     if (flag == 1){
         digitalWrite(LED, LOW);
-        flag = 0;
+        flag = 0;   
     }
 }
 }
