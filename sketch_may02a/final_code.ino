@@ -58,6 +58,30 @@ void loop() {
     Serial.println("You ran away :("); // Prints a message through the serial monitor 
     digitalWrite(LED, LOW); // turns off the LED
 }
+    // Loops the potentiometer adjusting the brightness manually
+    potVal = analogRead(pinPot); // Analog input of the actual potentiometer which is converted to a number
+    potVal = map(potVal, 0, 1023, 0, 255); // adjusted based on the mapping configurations of the potentiometer 
+    analogWrite(LED, potVal); // LED brightness get's adjusted based off potVal value
+    Serial.println(potVal); // Also reads out the value from the potentiometer for feedback
+    delay(200); // delay it by 2/10 of a second or 200 miliseconds 
+
+    // Loops the push
+    buttonState = digitalRead(buttonPin)
+    
+    if (buttonState == LOW) {
+        if (flag == 0){
+            digitalWrite(LED, HIGH);
+            flag = 1;
+        }
+    else 
+    if (flag == 1){
+        digitalWrite(LED, LOW);
+        flag = 0;   
+    }
+}
+
+
+
 
 }
 
