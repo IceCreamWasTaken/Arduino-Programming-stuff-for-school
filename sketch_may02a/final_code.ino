@@ -78,23 +78,22 @@ void loop() {
       // if it's off again henceforth the :
       digitalWrite(LED, ledState); // the LED light will turn on or off based on the button whether it's pressed or not
       delay(50); // delays by 50 miliseconds or 1/20 of a second
+      oldButtonState = buttonState; // The old button state will store whatever the current button state has done
 
     // Loops the light sensor; collects light   
-    int analogValue = analogRead(A1);
+    int analogValue = analogRead(A1); // Reads the sensor value 
 
-    Serial.print("Brightness: ")
-    Serial.print(analogValue);
+    Serial.print("Brightness: ") // prints out the string 
+    Serial.print(analogValue); // Reads out whatever the light sensor picks up
 
-    if (analogValue <10) {
-      Serial.println("Dark!");
+    if (analogValue <10) { // If the light sensor value is less than 10
+      Serial.println("Dark!"); // Prints out string value
     } else
-    if (analogValue >800) {
-      Serial.println("TOO BRIGHT AHHHHH!")
+    if (analogValue >800) { // else if light sensor value is greeater than 800
+      Serial.println("TOO BRIGHT AHHHHH!") // Prints out string value
     }
 
-
-
     }
-    oldButtonState = buttonState; // The old button state will store whatever the current button state has done
 }
 
+// All code referencing and credits will be put in the reference list on the evaluation sheet :)
