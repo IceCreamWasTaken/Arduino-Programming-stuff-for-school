@@ -14,5 +14,6 @@ Start for the next few weeks on setting up a web server
 Python Server
 HTML, CSS content
 Flask-Mega stuff! First 14 Chapters  (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+https://flask.palletsprojects.com/en/2.1.x/ 
 
 6:42pm - getting to it, pretty hard to do!
