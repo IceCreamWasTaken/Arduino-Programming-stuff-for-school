@@ -6,3 +6,11 @@ In particular this is the Assessment 3 work task, about Text to speech yay!
 
 5:46pm @ Wed 25th May - Decided to rethink how to work around with python, but instead found out combining HTML, CSS and Javascript, you will be able to create a website styled TTS application and ITS WITHOUT PYTHON YAY. Problem is you got to Javascript!'
 
+5:52pm @ Wed 25th May - HTML, CSS, Python instead of javascript (Server!)
+learn how to build a web server (majority of learning python)
+Library of tts 
+Priortise Server Management 
+Start for the next few weeks on setting up a web server 
+Python Server
+HTML, CSS content
+Flask-Mega stuff! First 14 Chapters  (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
