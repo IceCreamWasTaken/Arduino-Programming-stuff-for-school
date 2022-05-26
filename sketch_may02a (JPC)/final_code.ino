@@ -48,7 +48,7 @@ void loop() {
     motionStatePrevious = motionStateCurrent; // stores the old state 
     motionStateCurrent = digitalRead(Motion_Sensor_PIN); // reads the new state 
 
-    if (motionatStatePrevious == LOW && motionStateCurrent == HIGH) { // A conditional that basically says if the previous state
+    if (motionStatePrevious == LOW && motionStateCurrent == HIGH) { // A conditional that basically says if the previous state
     // is off and the current state is on then the bottom functions will be run
     Serial.println("I see you"); // Prints a message through the serial monitor
     digitalWrite(LED, HIGH); // turns on the LED 
@@ -83,14 +83,14 @@ void loop() {
     // Loops the light sensor; collects light   
     int analogValue = analogRead(A1); // Reads the sensor value 
 
-    Serial.print("Brightness: ") // prints out the string 
+    Serial.print("Brightness: "); // prints out the string 
     Serial.print(analogValue); // Reads out whatever the light sensor picks up
 
     if (analogValue <10) { // If the light sensor value is less than 10
       Serial.println("Dark!"); // Prints out string value
     } else
     if (analogValue >800) { // else if light sensor value is greeater than 800
-      Serial.println("TOO BRIGHT AHHHHH!") // Prints out string value
+      Serial.println("TOO BRIGHT AHHHHH!"); // Prints out string value
     }
 
     }
