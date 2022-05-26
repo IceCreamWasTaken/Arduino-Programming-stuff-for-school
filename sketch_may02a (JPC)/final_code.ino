@@ -63,7 +63,7 @@ void loop() {
     potVal = analogRead(pinPot); // Analog input of the actual potentiometer which is converted to a number
     potVal = map(potVal, 0, 1023, 0, 255); // adjusted based on the mapping configurations of the potentiometer 
     analogWrite(LED, potVal); // LED brightness get's adjusted based off potVal value
-    Serial.println(potVal); // Also reads out the value from the potentiometer for feedback
+    Serial.println(potVal); // Also reads out the value from the potentiometer for feedback. Not needed but it's there
     delay(200); // delay it by 2/10 of a second or 200 miliseconds 
 
     // Loops the push button
