@@ -19,3 +19,5 @@ https://flask.palletsprojects.com/en/2.1.x/
 6:42pm - getting to it, pretty hard to do!
 
 6:06pm @ Wed 1st June - Got a working server with html elements! 
+
+Wed 8th June - Added <p> and add some sweet sweet styles!
