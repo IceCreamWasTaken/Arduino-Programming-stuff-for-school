@@ -25,4 +25,4 @@ Wed 8th June - Added paragraph tags and added some sweet sweet styles!
 
 Wed 15th June - Revisited Chapter 2 and added a template to be used later in chapter 11 (making the server website look smick!)
 - Also added a div header just there, dunno what to do might add something fancy when I have time for it. (it does nothing)
-- 
+- Don't think I will be using Bootstrap but I did install it just incase. When I have extra time i'll see if I can make the website nice. Functionality first!
