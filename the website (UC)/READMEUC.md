@@ -26,3 +26,4 @@ Wed 8th June - Added paragraph tags and added some sweet sweet styles!
 Wed 15th June - Revisited Chapter 2 and added a template to be used later in chapter 11 (making the server website look smick!)
 - Also added a div header just there, dunno what to do might add something fancy when I have time for it. (it does nothing)
 - Don't think I will be using Bootstrap but I did install it just incase. When I have extra time i'll see if I can make the website nice. Functionality first!
+- Flagging Chapter 11 to come back to, I would like to make my website look nice with that bit of server management but I need to focus on the TTS aspect first as it's a high priority
