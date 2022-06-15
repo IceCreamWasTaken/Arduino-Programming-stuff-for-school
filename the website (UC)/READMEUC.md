@@ -21,3 +21,4 @@ https://flask.palletsprojects.com/en/2.1.x/
 6:06pm @ Wed 1st June - Got a working server with html elements! 
 
 Wed 8th June - Added paragraph tags and added some sweet sweet styles!
+  - Also read the first 10 chapters, I don't think I'll be needing a login system but as I'm progressing if I do have time, I can create one for people to access their past content (text to speech inputs and download files again)
