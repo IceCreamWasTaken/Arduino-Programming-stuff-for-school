@@ -27,3 +27,4 @@ Wed 15th June - Revisited Chapter 2 and added a template to be used later in cha
 - Also added a div header just there, dunno what to do might add something fancy when I have time for it. (it does nothing)
 - Don't think I will be using Bootstrap but I did install it just incase. When I have extra time i'll see if I can make the website nice. Functionality first!
 - Flagging Chapter 11 to come back to, I would like to make my website look nice with that bit of server management but I need to focus on the TTS aspect first as it's a high priority
+- Skim read Chapter 12, probably going to flag this as I want to put a clock interface somehow on the website. But again probably not going to be using it
