@@ -24,4 +24,5 @@ Wed 8th June - Added paragraph tags and added some sweet sweet styles!
   - Also read the first 10 chapters, I don't think I'll be needing a login system but as I'm progressing if I do have time, I can create one for people to access their past content (text to speech inputs and download files again)
 
 Wed 15th June - Revisited Chapter 2 and added a template to be used later in chapter 11 (making the server website look smick!)
-- Also added a div header just there, dunno what to do might add something fancy when I have time for it.
+- Also added a div header just there, dunno what to do might add something fancy when I have time for it. (it does nothing)
+- 
