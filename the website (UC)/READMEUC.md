@@ -35,3 +35,6 @@ Wed 15th June - Revisited Chapter 2 and added a template to be used later in cha
 - Flagging Chapter 11 to come back to, I would like to make my website look nice with that bit of server management but I need to focus on the TTS aspect first as it's a high priority
 - Skim read Chapter 12, probably going to flag this as I want to put a clock interface somehow on the website. But again probably not going to be using it
 - Stopped at Chapter 13, would be interesting trying to use different languages for TTS!
+
+Wed 22nd June - Revisted Chapter 12 and decided to add my own footer not with bootstrap haha goodbye bootstrap you suck!
+- Haven't worked on Chapter 13 yet
