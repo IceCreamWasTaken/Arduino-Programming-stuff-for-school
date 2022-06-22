@@ -1,3 +1,9 @@
+To create a virtual environment to host a server:
+1. cd textToSpeech - this is to find the directory
+2. python3 -m venv venv - creates a virtual environment, the second venv is the name of the environment
+3. venv\Scripts\activate - activates the virtual environment where you can download stuff like flask and cool things
+
+
 This stuff is for UC
 
 In particular this is the Assessment 3 work task, about Text to speech yay!
