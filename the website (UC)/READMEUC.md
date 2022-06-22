@@ -38,3 +38,4 @@ Wed 15th June - Revisited Chapter 2 and added a template to be used later in cha
 
 Wed 22nd June - Revisted Chapter 12 and decided to add my own footer not with bootstrap haha goodbye bootstrap you suck!
 - Haven't worked on Chapter 13 yet
+- Added a shape on the footer
