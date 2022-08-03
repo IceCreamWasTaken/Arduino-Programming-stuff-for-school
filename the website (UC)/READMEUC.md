@@ -53,3 +53,6 @@ Wed 3rd of August
 - Ended up integrating ajax and js too, will look ajax later (seems a jquery language or something)
 - To do list is DON'T FORGET TO CODE COMMENT AND REFERENCE BECAUSE YES
 - Actually fiddled around with bootstrap! Don't know if it will work until I start debugging wooooo!
+- Started editing the html file and changing the wacks and boons.
+- Encountered an issue with the stupid requests module. This was solved by pip installing requests via the virtual environment 
+- Left at the Error 404 with a funny Not Found requested URL not found in server, will troubleshoot this once everything is done before code comments and user documentations are worked on.
