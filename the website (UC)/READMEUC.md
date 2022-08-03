@@ -3,6 +3,11 @@ To create a virtual environment to host a server:
 2. python3 -m venv venv - creates a virtual environment, the second venv is the name of the environment
 3. venv\Scripts\activate - activates the virtual environment where you can download stuff like flask and cool things
 
+However, a more quicker way to run flask is to:
+1. cd textToSpeech (cd means current directory)
+2. venv\Scripts\activate to activate the virtual environment 
+3. then you can run the flask run function to get a localhost server only you can see
+
 
 This stuff is for UC
 
