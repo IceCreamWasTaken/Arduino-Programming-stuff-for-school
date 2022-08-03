@@ -42,3 +42,9 @@ Wed 22nd June - Revisted Chapter 12 and decided to add my own footer not with bo
 
 Wed 27th of July - Stopped using flask don't think I will have enough time to implement some of the cool stuff on it probably when I have extra time
 - Subscribed to an API that runs with python and flask to bring TTS to a web server. :) 
+
+Wed 3rd of August 
+- Continued to integrate flask + python into a robust TTS, replanned it so that there's something functional
+- Ended up integrating ajax and js too, will look ajax later (seems a jquery language or something)
+- To do list is DON'T FORGET TO CODE COMMENT AND REFERENCE BECAUSE YES
+- Actually fiddled around with bootstrap! Don't know if it will work until I start debugging wooooo!
