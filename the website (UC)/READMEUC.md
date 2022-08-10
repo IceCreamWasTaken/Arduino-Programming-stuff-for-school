@@ -60,3 +60,5 @@ Wed 3rd of August
 Wed 10th of August 
 - Worked on getting the html part done so you can see the website!
 - https://rapidapi.com/hivoicy-vxmKOG2vl/api/text-to-speech14/ 
+- https://rapidapi.com/blog/text-to-speech-python-flask/#the-html-template-code-blocks !!!
+- Completed the index.html file, working on an audio.html for playability of the audio files
