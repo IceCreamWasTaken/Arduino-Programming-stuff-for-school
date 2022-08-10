@@ -79,7 +79,28 @@
 
         </style>
     </head>
-    <body>
+
+    <body style="text-align: left;">
+        <script>
+            function dropdownChange() {
+                if (document.getElementById('dropdown').value == 'create') {
+                    document.getElementById('form').style.display = '';
+                    var audioE1 = document.getElementById('audio');
+                    if (audioE1)
+                      document.getElementById('audio').style.display = 'none';
+                    else
+                      document.getElementById('table').style.display = 'none';
+                }
+
+                else if (document.getElementById('dropdown').value == 'list') {
+                    document.getElementById('form').style.display = 'none';
+                    window.location.replace("http://localhost:5000/tts/list");
+                }
+            }
+            function showLoading() {
+                document.getElementById("myModal").style.display = "block";
+            }
+        </script>
         <div><a href="">Text To Speech Converter</a></div>
         <hr>
         <h1 style="text-align: center;">Hello! Welcome to the Text to Speech Converter!</h1>
@@ -90,10 +111,55 @@
             <p>To get started. Type what you like to say in the following box then click 'Play!'</p>
 
             <p>among us (placeholder but this is where the text field belongs in)</p>
+            <select oncharge='dropdownChange()' class="select form-control" id="dropdown" name="dropdown">
+                <option selected="true" disabled="disabled">--Select a Voice!--</option>
+                <option value="create">create</option>
+                <option value="list">list</option>
+            </select>
+            <div style="margin-top:25px;">
+            <form action="http://localhost:5000/tts/create" method="post" id="form" style="display: none">
+            <p>Enter Name:</p>
+            <p><input type="text" name="nm" /></p>
+            <p><input type="submit" value="submit" onclick="showLoading()" /></p>
+        </form>
+    </div>
+    {% if rows|length > 0 %}
+    <table border=1 id="table">
+        <thread>
+            <td>ID</td>
+            <td>Text</td>
+        </thread>
+        {% for row in rows %}
+        <tr>
+            <td>{{row['id']}}</td>
+            <td><a href="http://localhost:5000/tts/{{row['id']}}">{{row['text']}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    {% if lt|length > 0 %}
+    <div id="audio">
+        {% for l in lt %}
+        <h5>{{1['id']}}</h5><audio controls>
+            <source src='{{url_for('static', filename='')}}{{1['audio']}}.wav'>
+        </audio>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content-->
+        <div class="loader">
+        </div>
+    </div>
 
             <footer>
                 <p style="margin: 0%; text-align: center; padding: 20px;">© 2022 Copyright:  
                     The Fake David Company (does not exist)</p>
                 <br>
             </footer>
+    </body>
+    
 </html>
