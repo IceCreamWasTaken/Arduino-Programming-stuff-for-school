@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>Text to Speech Converter!</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -15,10 +20,61 @@
                 background-color: lightgrey;
                 color: dimgrey;
                 padding: 5px;
+                display: block;
+                border-radius: 15px;
             }
 
             footer > p {
                 text-align: center;
+            } 
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .loader {
+                margin: auto;
+                border: 16px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 16px solid #3498db;
+                width: 120px;
+                height: 120px;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite; /* this is for safari */
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            #dropdown {
+                width: 200px;
+                margin: auto;
+                border: 2px solid black;
+            }
+
+            #form {
+                margin: auto;
+            }
+
+            #table {
+                margin: auto;
             }
 
         </style>
@@ -36,7 +92,8 @@
             <p>among us (placeholder but this is where the text field belongs in)</p>
 
             <footer>
-                <p style="margin: 0%; text-align: center; padding: 20px">© 2022 Copyright:  The Fake David Company (does not exist)</p>
+                <p style="margin: 0%; text-align: center; padding: 20px;">© 2022 Copyright:  
+                    The Fake David Company (does not exist)</p>
                 <br>
             </footer>
 </html>
