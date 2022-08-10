@@ -59,3 +59,4 @@ Wed 3rd of August
 
 Wed 10th of August 
 - Worked on getting the html part done so you can see the website!
+- https://rapidapi.com/hivoicy-vxmKOG2vl/api/text-to-speech14/ 
