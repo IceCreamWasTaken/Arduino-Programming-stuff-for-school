@@ -56,3 +56,6 @@ Wed 3rd of August
 - Started editing the html file and changing the wacks and boons.
 - Encountered an issue with the stupid requests module. This was solved by pip installing requests via the virtual environment 
 - Left at the Error 404 with a funny Not Found requested URL not found in server, will troubleshoot this once everything is done before code comments and user documentations are worked on.
+
+Wed 10th of August 
+- Worked on getting the html part done so you can see the website!
