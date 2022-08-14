@@ -62,3 +62,9 @@ Wed 10th of August
 - https://rapidapi.com/hivoicy-vxmKOG2vl/api/text-to-speech14/ 
 - https://rapidapi.com/blog/text-to-speech-python-flask/#the-html-template-code-blocks !!!
 - Completed the index.html file, working on an audio.html for playability of the audio files
+
+Sun 14th of August
+- Was bored so I decided to finish off the audio.html file and the database.py
+- I then run database.py in the virtual environment which then creates a database.db file (where all the audio files will be stored as a query, i did download the sqlite 3 extension ready to "probe" the database lol)
+- Tried testing it out, seems that the website works fine, however I wasn't able to get an actual audio file working, installed nor played, think I did something wrong; will look into this on Wed's class, will seek help from teacher for solutions, perhaps it's something to do with the API endpoints since I'm using a different one compared to the tutorial's (tutorial's api that I want doesn't exist) will look into.
+- I need this working before I am able to code comment and create a presentation!!!!
