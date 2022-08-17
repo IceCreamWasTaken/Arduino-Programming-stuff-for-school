@@ -8,6 +8,8 @@ However, a more quicker way to run flask is to:
 2. venv\Scripts\activate to activate the virtual environment 
 3. then you can run the flask run function to get a localhost server only you can see
 
+So I was working on Robotics homework and I saw that VSCode has a Live Server extension, does this work with flask or will I get explosions?
+Live Extension allows you to run a website without launching a server yourself; it does it for you! 
 
 This stuff is for UC
 
@@ -68,3 +70,6 @@ Sun 14th of August
 - I then run database.py in the virtual environment which then creates a database.db file (where all the audio files will be stored as a query, i did download the sqlite 3 extension ready to "probe" the database lol)
 - Tried testing it out, seems that the website works fine, however I wasn't able to get an actual audio file working, installed nor played, think I did something wrong; will look into this on Wed's class, will seek help from teacher for solutions, perhaps it's something to do with the API endpoints since I'm using a different one compared to the tutorial's (tutorial's api that I want doesn't exist) will look into.
 - I need this working before I am able to code comment and create a presentation!!!!
+
+Wed 17th of August
+- It's time for some tech support time
