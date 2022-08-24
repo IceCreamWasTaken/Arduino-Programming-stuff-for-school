@@ -91,3 +91,4 @@ Wed 24th of August
 - I GOT IT WORKING :D !!!!!!!!
 - One thing that taught me within the past 10 weeks, GOODBYE RAPID API YOU SUCK HAHHAHAHAHAHHA I COULD'VE JUST STICKED WITH PYTTSX3 AHHHHHHHHH
 - Will be working on code commenting both the api code and the actually working one because i've learnt alot with this!
+- 6:25pm done
