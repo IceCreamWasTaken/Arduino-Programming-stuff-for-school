@@ -15,7 +15,7 @@ Check below on the 24th August prompt to see what I made.
 Other wise the prompt to set up a virtual environment:
 1. cd Desktop
 2. cd optimisedtts
-3. venv\scripts\activate to activate the virtual environment because visual code decided not to run because of execution POLICIES!!! EXCUSE ME WHAT
+3. venv\scripts\activate to activate the virtual environment, **activate it on command prompt please!** because visual code decided not to run because of execution POLICIES!!! EXCUSE ME WHAT
 4. flask run ig
 
 So I was working on Robotics homework and I saw that VSCode has a Live Server extension, does this work with flask or will I get explosions?
