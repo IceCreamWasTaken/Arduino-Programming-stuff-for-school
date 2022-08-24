@@ -92,3 +92,4 @@ Wed 24th of August
 - One thing that taught me within the past 10 weeks, GOODBYE RAPID API YOU SUCK HAHHAHAHAHAHHA I COULD'VE JUST STICKED WITH PYTTSX3 AHHHHHHHHH
 - Will be working on code commenting both the api code and the actually working one because i've learnt alot with this!
 - 6:25pm done
+- https://pyttsx3.readthedocs.io/en/latest/engine.html popping this here as this is the good documentation stuff
