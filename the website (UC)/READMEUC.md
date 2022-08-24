@@ -88,4 +88,6 @@ Wed 24th of August
 - Found an optimised version this time you need to use pyttsx3  rather than using an API
 - https://dev.to/siddheshshankar/build-a-text-to-speech-service-with-python-flask-framework-3966
 - Did some troubleshooting with some shennangains and also used this to help https://code.visualstudio.com/docs/python/tutorial-flask
-- 
+- I GOT IT WORKING :D !!!!!!!!
+- One thing that taught me within the past 10 weeks, GOODBYE RAPID API YOU SUCK HAHHAHAHAHAHHA I COULD'VE JUST STICKED WITH PYTTSX3 AHHHHHHHHH
+- Will be working on code commenting both the api code and the actually working one because i've learnt alot with this!
