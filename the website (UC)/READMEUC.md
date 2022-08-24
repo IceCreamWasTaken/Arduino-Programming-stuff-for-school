@@ -73,3 +73,7 @@ Sun 14th of August
 
 Wed 17th of August
 - It's time for some tech support time
+
+Wed 24th of August
+- Found an optimised version this time you need to use pyttsx3  rather than using an API
+- https://dev.to/siddheshshankar/build-a-text-to-speech-service-with-python-flask-framework-3966
