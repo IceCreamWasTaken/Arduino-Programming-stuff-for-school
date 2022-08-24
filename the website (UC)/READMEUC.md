@@ -8,6 +8,16 @@ However, a more quicker way to run flask is to:
 2. venv\Scripts\activate to activate the virtual environment 
 3. then you can run the flask run function to get a localhost server only you can see
 
+**UPDATE AS OF 24TH OF AUGUST**
+I have decided to optimise the code because the API sucks! 
+Check below on the 24th August prompt to see what I made.
+
+Other wise the prompt to set up a virtual environment:
+1. cd Desktop
+2. cd optimisedtts
+3. venv\scripts\activate to activate the virtual environment because visual code decided not to run because of execution POLICIES!!! EXCUSE ME WHAT
+4. flask run ig
+
 So I was working on Robotics homework and I saw that VSCode has a Live Server extension, does this work with flask or will I get explosions?
 Live Extension allows you to run a website without launching a server yourself; it does it for you! 
 
