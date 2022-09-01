@@ -1,17 +1,26 @@
-<!-- code comments to be typed on client software-->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- HTML declaration-->
+<html lang="en"> <!-- Language -->
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Text to Speech!</title>
-        <style type="text/css">
+        <meta charset="UTF-8" /> <!-- character set in which the computer reads to display letters,
+        numbers and special characters. UTF-8 or Unicode Transformation Format - 8 bits in which they
+        code points (e.g U+0041 for A, U+0061 for a) are used to store and translate into letters/binary. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- code to make the website look
+        friendly to all devices -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" /> <!-- compatability mode, not neccessary, but in the name
+        of accessibility, the website should be accessible to everyone and anything (since it mimics or emulates an 
+        older software/operating system, yes this can run in internet explorer if you are that old)-->
+        <title>Text to Speech!</title> <!-- name of the website, appears as a tab-->
+
+        <!-- Internal CSS of what the website style will contain. This includes the actual input boxes for TTS
+        vh, px and em are measuring values. -->
+        <!-- Notes: keyrames is a rule specifying the animation code, so for this one it changes the colour of the 
+        main which is the form where user inputs text to be spoken onto TTS -->
+        <style type="text/css"> 
             * {
                 box-sizing: border-box;
             }
             html, body {
-                min-height: 100vh;
+                min-height: 100vh; 
                 margin: 0;
                 padding: 0;
             }
@@ -40,7 +49,7 @@
                 border-radius: 12px;
                 margin-bottom: 2em;
             }
-            @keyframes bg-pulse {
+            @keyframes bg-pulse { 
                 0% {
                     background-color: #fff;
                 }
