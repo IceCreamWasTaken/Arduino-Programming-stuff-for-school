@@ -14,7 +14,10 @@
         <!-- Internal CSS of what the website style will contain. This includes the actual input boxes for TTS
         vh, px and em are measuring values. -->
         <!-- Notes: keyrames is a rule specifying the animation code, so for this one it changes the colour of the 
-        main which is the form where user inputs text to be spoken onto TTS -->
+        main which is the form where user inputs text to be spoken onto TTS.
+        Box sizing as border-box being the padding and border with width and height
+        Everything else is a simple design of the website, nothing too complex, nothing too fancy so long as it fufills
+        it's purpose of being a TTS website to be able to be accessed by everyone it's alright. -->
         <style type="text/css"> 
             * {
                 box-sizing: border-box;
@@ -135,6 +138,7 @@
             <header>
                 <h1>Welcome to Text To Speech Converter!</h1>
             </header>
+            <!-- header is the website name that the tab will define -->
 
             <main>
                 <form class="input" id="voice-form" method="post">
@@ -142,6 +146,7 @@
                         <label for for="speech">Type Anything in this box...</label>
                         <input type="text" name="speech" id="speech" required />
                     </div>
+                    <!-- The input form tag is where the user will input in the box what they want to say -->
                     <div class="field">
                         <label for="voices">Choose your Voice Assistant!</label>
                           <select name="voices" id="voices">
